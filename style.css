@@ -1,0 +1,122 @@
+/* Genral rules */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+:root{
+/* Primary */
+--Bright-orange: hsl(31, 77%, 52%);
+--Darkcyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+/* Neutral */
+--Transparent-white: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray: hsl(0, 0%, 95%);
+}
+
+h1{
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--Very-light-gray);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+p{    
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: .8rem;
+    color: var(--Transparent-white);
+    margin-bottom: 4rem;
+    line-height: 1.6;
+    letter-spacing: .5px;
+}
+/* End of general rules  */
+
+/* styling the body */
+body{
+    background: var(--Very-light-gray);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container{
+    max-width: 850px;
+}
+
+/* styling the cards */
+.cards{
+    margin: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    align-content: center;
+    grid-auto-flow: row;
+}
+
+/* giving each card its background-color */
+.sedans{
+    background: var(--Bright-orange);
+    color: var(--Bright-orange);
+}
+.sedans>button{
+    color: var(--Bright-orange);
+}
+
+.suvs{
+    background: var(--Darkcyan);
+}
+.suvs>button{
+    color: var(--Darkcyan);
+}
+
+
+.luxury{
+    background: var(--Very-dark-cyan);
+}
+.luxury>button{
+    color: var(--Very-dark-cyan);
+}
+/* adding padding and styling each card */
+.card{
+    padding: 2rem;
+}
+.card img{
+    margin-bottom: 1rem;
+}
+
+/* styling the button */
+button{
+    background: var(--Very-light-gray);
+    border: 3px solid var(--Very-light-gray);
+    padding: .7rem;
+    width: 120px;
+    border-radius: 25px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+button:hover{
+    color: var(--Very-light-gray);
+    background: none;
+    
+}
+
+/* styling the attribution */
+.attribution {
+    position: absolute;
+    font-size: 11px; text-align: center;
+    bottom: .5rem;
+    }
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width:700px){
+    p{
+        margin-bottom: 2rem;
+    }
+}
